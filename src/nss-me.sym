@@ -1,0 +1,8 @@
+{
+global:
+	_nss_me_getpwnam_r;
+	_nss_me_getpwuid_r;
+	_nss_me_getgrnam_r;
+	_nss_me_getgrgid_r;
+local: *;
+};

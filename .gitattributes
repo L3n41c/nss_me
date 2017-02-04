@@ -1,0 +1,2 @@
+Makefile.am whitespace=-tab-in-indent
+*.sym whitespace=-tab-in-indent

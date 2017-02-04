@@ -1,0 +1,20 @@
+dist: trusty
+
+language: c
+
+addons:
+  apt:
+    packages:
+      - autoconf-archive
+
+compiler:
+  - clang
+  - gcc
+
+before_script:
+  - curl -o m4/ax_gcc_var_attribute.m4 "http://git.savannah.gnu.org/gitweb/?p=autoconf-archive.git;a=blob_plain;f=m4/ax_gcc_var_attribute.m4"
+
+script:
+  - ./bootstrap
+  - ./configure
+  - make distcheck
