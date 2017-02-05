@@ -18,3 +18,13 @@ script:
   - ./bootstrap
   - ./configure
   - make distcheck
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ZS2mNFNLyXL4hswlV1weCDNVyyJv8lQ4WslLvqCZrjcKgahuLiydKiVIhGu17t5SkUItS7whEpV5INbsjBajmVf6vu8uXk4qz05IpW4hQPekCzbEp0ghT0vdAHh6ya6zDwijGAMHWbV3xM/HhHewZJ3kiGy2ZeDp/v/ndvHt++qeU0/nNCOAVhphO/ezpUKQsfiDRKS2dbKCGtPaq1qh6NMLh4wmNiEJoMqa6UI33+sfbU/zwepA0SsM9z0XFaPJO4W/uuMIZ1Ufh/xCX8t4msuuBPcMwVBzdkYo4vuvrK+g72s/VMdzPZkzeskzj1SW6wzkJG08xFYjrqZvuaOdYp4CRS4/KtAXlSRNTmYNsKqJYLDsCB2vu3Lk/XwUH+EmsBhuulKl5msfb+IjRQJxeWanNNxkSqP+WifPgz5Jo2BIls1npwWDWCKLbZdrhs009i6ewz2QG5oxKBhpvQg58qM4B6QSXOtoTuqmqhBrZQ0auNhTkVkBAiwsEfO6JHxOs4z4L9QnMTfTykl63ZfiY0cBaqi8R/8aqJYxoV33wzAJyPabib8KC/Fa3Kr94He/g3uHBVK4yWdYex89dg6zsI7rMD2e3dQI1qBUNqf2w4MuxfyM918QCLgjRMEASS2cZMrJzuaKKKshwIw1Ee31zwkqXXgU7BUV//vqTo3xJFg=
+  file_glob: true
+  file: "nss_me-*.tar.*"
+  on:
+    repo: L3n41c/nss_me
+    tags: true
